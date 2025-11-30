@@ -1,26 +1,18 @@
 # Spotify Top Songs
 
-Get  top listened songs from Spotify.
+Get your most listened songs from Spotify.
 
 
-## Setup
-
-1. Create a virtual environment and install dependencies:
+##  Install the Package
 ```bash
 python -m venv venv
 source venv/bin/activate
-pip3 install -r requirements.txt
+pip install -e .
 ```
 
-## Command
-
+## Usage
 ```bash
-python spotify_top_songs.py
-```
-
-With options:
-```bash
-python3 spotify_top_songs.py --time-range short_term --limit 50
+spotify-top-songs
 ```
 
 ### Options
@@ -32,12 +24,15 @@ python3 spotify_top_songs.py --time-range short_term --limit 50
 
 - `--limit`: Number of tracks to display (1-50, default: 20)
 
-## Examples
+### Examples
 
 ```bash
 # Top 10 tracks from the last month
-python spotify_top_songs.py --time-range short_term --limit 10
+spotify-top-songs --time-range short_term --limit 10
 
 # Top 50 tracks of all time
-python spotify_top_songs.py --time-range long_term --limit 50
+spotify-top-songs --time-range long_term --limit 50
+
+# Default: top 20 tracks from last 6 months
+spotify-top-songs
 ```
